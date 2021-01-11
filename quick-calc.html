@@ -31,19 +31,29 @@
     </nav>
 
     <div class="container pb-5">
-      <div class="row">
-        <div class="col">
-          <div class="card border-0">
-            <div class="card-body p-5">
-              <h1 class="card-title">Quick Calculator</h1>
-              <p class="cart-text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-              <a class="btn btn-outline-primary" href="quick-calc.html" role="button">Quick Calculator</a>
-              <a class="btn btn-outline-primary ms-2" href="instructions.html" role="button">Instructions</a>
+        <div class="row align-items-center">
+            <div class="col-4">
+              <div class="card border-0 my-5 bg-light py-2 px-2">
+                <div class="card-body">
+                  <h1 class="card-title">Quick Calculator</h1>
+                  <form>
+                    <div class="form-floating my-4">
+                        <input type="number" class="form-control" id="ch100" placeholder="40">
+                        <label for="ch100">Carbohydrates pro 100g</label>
+                      </div>
+
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="portion" placeholder="120">
+                        <label for="portion">Portion Size in g</label>
+                      </div>
+
+                      <button type="submit" class="btn btn-outline-primary mt-4">Calculate</button>
+                  </form>
+                </div>
+              </div>
             </div>
+            <div class="col-8"></div>
           </div>
-        </div>
-        <div class="col">A</div>
-      </div>
     </div>
 
     <footer class="fixed-bottom">
