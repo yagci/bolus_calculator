@@ -132,3 +132,11 @@ footer {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+#border {
+    background-color: #fff;
+    height:22px;
+    background-image: url("images/streusel.png");
+    background-repeat: repeat-x;
+    background-size: 200px;
+}
