@@ -61,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 3px solid #d5d5d5;
     background: -webkit-linear-gradient(0deg, #E88484, #FFB999);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     border-color: #FFB999;
     transition: .6s;
@@ -75,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     background: -webkit-linear-gradient(0deg, #E88484, #FFB999);
     font-weight: 700;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: .6s;
 }
@@ -82,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand:hover {
     background: -webkit-linear-gradient(270deg,#FFB999, #E88484);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: .6s;
 }
@@ -120,4 +123,12 @@ footer {
     color: #555;
     font-weight: 500;
     padding-left: 5px;
+}
+
+.instructions h1{
+    font-size: 1.5rem;
+    background: -webkit-linear-gradient(90deg, #E88484, #FFB999);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
