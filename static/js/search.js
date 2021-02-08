@@ -21,7 +21,6 @@ function searchProducts() {
     d3.json(uri, function(data) {
         let d = data.products.slice(1, max);
         for (var i = 0; i < max-1; i++) {
-            console.log(d[i]);
             let tr = tbody.append('tr');
             tr.append('td').html('<a href="product.html?id=' + d[i].id + '">' + d[i].product_name + '</a>');
             tr.append('td').text(d[i].brands);
@@ -36,6 +35,3 @@ function keypress(event){
         searchProducts();
     };
 };
-
-let searchParams = new URLSearchParams(window.location.search);
-console.log(searchParams.get('id'));
