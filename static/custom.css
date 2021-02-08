@@ -140,3 +140,11 @@ footer {
     background-repeat: repeat-x;
     background-size: 200px;
 }
+
+thead {
+    background-color: #E88484;
+}
+
+table a {
+    text-decoration: none;
+}
