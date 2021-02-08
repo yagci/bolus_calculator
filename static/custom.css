@@ -11,6 +11,7 @@ body {
 
 a {
     color: #E88484;
+    text-decoration: none;
 }
 
 a:hover {
@@ -145,6 +146,7 @@ thead {
     background-color: #E88484;
 }
 
-table a {
-    text-decoration: none;
+.info {
+    font-style: italic;
+    font-size: .75rem;
 }
