@@ -5,8 +5,8 @@ const url = 'https://de.openfoodfacts.org/api/v0/product/';
 const uri = url + id;
 
 // pie chart prep
-let width = 300;
-let height = 300;
+let width = 400;
+let height = 400;
 let margin = 50;
 let radius = Math.min(width, height) / 2 - margin
 
@@ -48,7 +48,7 @@ d3.json(uri, function(data) {
         .data(data_ready)
         .enter()
         .append('path').attr('d', d3.arc()
-            .innerRadius(60)
+            .innerRadius(100)
             .outerRadius(radius)
         ).attr('fill', function(d) { return(color(d.data.key)) })
         .attr('stroke', 'white');
@@ -57,7 +57,7 @@ d3.json(uri, function(data) {
     for (let key in data_s) {
         let tr = tbody.append('tr');
         tr.append('td').text(key);
-        tr.append('td').text(data_s[key]);
+        tr.append('td').attr('class', 'text-end').text(data_s[key]);
     };
 }).header('User-Agent', 'Bolus-Rechner - Web - Version 1.0 - https://yagci.github.io/bolus_calculator/');
 
