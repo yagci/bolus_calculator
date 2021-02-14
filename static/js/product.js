@@ -16,7 +16,7 @@ let kh;
 d3.json(uri, function(data) {
     let p = data.product;
 
-    d3.select('h1').text(p.product_name + ' (' + p.brands + ')');
+    d3.select('h3').text(p.product_name + ' (' + p.brands + ')');
 
     let svg = d3.select("#pie")
                 .append("svg")
