@@ -32,29 +32,54 @@
     </nav>
 
     <div class="container pb-5">
-        <div class="row align-items-center">
+        <div class="row align-items-top">
             <div class="col-12">
-              <div class="card border-0 my-5 bg-light py-2 px-2">
+              <div class="card border-0 my-5 py-2 px-2">
                 <div class="card-body">
                   <h1 class="card-title">Produkt</h1>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">RECHNER</div>
-            <div class="col-md-3">
-                <div id="pie"></div>
-            </div>
-            <div class="col-md-3">
-                <table class="table">
-                    <thead class="text-white">
-                        <tr>
-                            <td>Nährwert</td>
-                            <td>Gram (pro 100g)</td>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+            <div class="col-md-6">
+              <div id="pie" class="text-center"></div>
+              <table class="table">
+                  <thead class="text-white">
+                      <tr>
+                          <td>Nährwert</td>
+                          <td>Gram (pro 100g)</td>
+                      </tr>
+                  </thead>
+                  <tbody></tbody>
+              </table>
+          </div>
+            <div class="col-md-6">
+              <div class="card border-0 my-5 bg-light py-2 px-2">
+                <div class="card-body">
+                  <form>
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="portion-size" placeholder="0">
+                        <label for="portion-size">Portion Size in g</label>
+                      </div>
+
+                      <button type="button" class="btn btn-outline-primary mt-4" onclick="calc()">Calculate</button>
+                  </form>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card border-0 my-1 bg-light py-2 px-2">
+                    <h6 class="card-subtitle mb-2 text-muted">CP <a href="instructions.html#CP"><i class="fas fa-info-circle"></i></a></h6>
+                    <p id="ke" class="card-text">0</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card border-0 my-1 bg-light py-2 px-2">
+                    <h6 class="card-subtitle mb-2 text-muted">BE <a href="instructions.html#BE"><i class="fas fa-info-circle"></i></a></h6>
+                    <p id="be" class="card-text">0</p>
+                  </div>
+                </div>
+              </div>
+            </div>       
           </div>
     </div>
 
