@@ -13,18 +13,18 @@ let radius = Math.min(width, height) / 2 - margin
 let kh;
 
 // get product
-d3.json(uri, function(data) {
+d3.json(uri, function (data) {
     let p = data.product;
 
     d3.select('h3').text(p.product_name + ' (' + p.brands + ')');
 
     let svg = d3.select("#pie")
-                .append("svg")
-                    .attr("width", width)
-                    .attr("height", height)
-                .append("g")
-                    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-    
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
     // create data for pie chart and calc
     let other = 100 - (p.nutriments.carbohydrates_100g + p.nutriments.fat_100g + p.nutriments.proteins_100g)
     let data_s = {
@@ -41,7 +41,7 @@ d3.json(uri, function(data) {
         .range(["#E88484", "#AAA", "#CCC", "#EEE"])
 
     let pie = d3.pie()
-        .value(function(d) {return d.value; })
+        .value(function (d) { return d.value; })
     let data_ready = pie(d3.entries(data_s))
 
     svg.selectAll('all')
@@ -50,9 +50,9 @@ d3.json(uri, function(data) {
         .append('path').attr('d', d3.arc()
             .innerRadius(100)
             .outerRadius(radius)
-        ).attr('fill', function(d) { return(color(d.data.key)) })
+        ).attr('fill', function (d) { return (color(d.data.key)) })
         .attr('stroke', 'white');
-    
+
     let tbody = d3.select('tbody');
     for (let key in data_s) {
         let tr = tbody.append('tr');
@@ -73,13 +73,13 @@ function calc() {
     document.getElementById('be').innerHTML = String(be.round(1)) + '<span>BE</span>';
 };
 
-Number.prototype.round = function(places) {
-    return +(Math.round(this + "e+" + places)  + "e-" + places);
+Number.prototype.round = function (places) {
+    return +(Math.round(this + "e+" + places) + "e-" + places);
 };
 
 // if input is sent with enter
-function keypress(event){
-    if (event.keyCode == 13 || event.which == 13){
+function keypress(event) {
+    if (event.keyCode == 13 || event.which == 13) {
         event.preventDefault();
         calc();
     };

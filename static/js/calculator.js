@@ -9,6 +9,6 @@ function calculate() {
     document.getElementById('be').innerHTML = String(be.round(1)) + '<span>BE</span>';
 }
 
-Number.prototype.round = function(places) {
-    return +(Math.round(this + "e+" + places)  + "e-" + places);
-  }
+Number.prototype.round = function (places) {
+    return +(Math.round(this + "e+" + places) + "e-" + places);
+}

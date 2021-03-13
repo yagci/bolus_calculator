@@ -18,9 +18,9 @@ function searchProducts() {
     tr.append('th').text('Marke');
 
     // set table body
-    d3.json(uri, function(data) {
+    d3.json(uri, function (data) {
         let d = data.products.slice(1, max);
-        for (var i = 0; i < max-1; i++) {
+        for (var i = 0; i < max - 1; i++) {
             let tr = tbody.append('tr');
             tr.append('td').html('<a href="product.html?id=' + d[i].id + '">' + d[i].product_name + '</a>');
             tr.append('td').text(d[i].brands);
@@ -29,8 +29,8 @@ function searchProducts() {
 };
 
 // if input is sent with enter
-function keypress(event){
-    if (event.keyCode == 13 || event.which == 13){
+function keypress(event) {
+    if (event.keyCode == 13 || event.which == 13) {
         event.preventDefault();
         searchProducts();
     };
